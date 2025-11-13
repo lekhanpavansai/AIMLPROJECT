@@ -1,0 +1,42 @@
+[
+  {
+    "test_name": "Synthetic Audio Test",
+    "mixture": "data\\mixture_audio.wav",
+    "target": "data\\target_sample.wav",
+    "output_dir": "outputs\\validation_test1",
+    "passed": true,
+    "errors": [],
+    "warnings": [],
+    "segment_count": 1,
+    "diarization_segments": 1,
+    "speakers": [
+      "speaker_0"
+    ],
+    "total_duration": 2.53,
+    "avg_confidence": 0.5,
+    "diarization.json_size_kb": 0.1396484375,
+    "timeline.json_size_kb": 0.234375,
+    "timeline.html_size_kb": 8.1298828125,
+    "target_speaker.wav_size_kb": 158.16796875
+  },
+  {
+    "test_name": "Real Audio Test (Vocals)",
+    "mixture": "outputs\\1_hanuman-song-maker-song-abhi-404570_(Vocals).wav",
+    "target": "outputs\\1_sample-6s_(Vocals).wav",
+    "output_dir": "outputs\\validation_test2",
+    "passed": true,
+    "errors": [],
+    "warnings": [],
+    "segment_count": 1,
+    "diarization_segments": 1,
+    "speakers": [
+      "speaker_0"
+    ],
+    "total_duration": 0.58,
+    "avg_confidence": 0.5,
+    "diarization.json_size_kb": 0.1396484375,
+    "timeline.json_size_kb": 0.234375,
+    "timeline.html_size_kb": 8.1298828125,
+    "target_speaker.wav_size_kb": 36.29296875
+  }
+]

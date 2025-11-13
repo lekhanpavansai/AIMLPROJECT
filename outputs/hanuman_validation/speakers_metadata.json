@@ -1,0 +1,11 @@
+{
+  "speakers": [
+    {
+      "index": 0,
+      "path": "outputs\\hanuman_validation\\speakers\\speaker_0.wav",
+      "is_target": true,
+      "similarity": 0.7799381017684937
+    }
+  ],
+  "total_speakers": 1
+}

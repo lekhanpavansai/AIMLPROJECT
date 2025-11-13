@@ -1,0 +1,12 @@
+{
+  "mixture_file": "outputs\\1_hanuman-song-maker-song-abhi-404570_(Instrumental).wav",
+  "target_file": "outputs\\1_sample-6s_(Instrumental).wav",
+  "output_dir": "outputs\\hanuman_validation",
+  "segments": 1,
+  "diarization_segments": 1,
+  "speakers": [
+    "speaker_0"
+  ],
+  "total_duration": 0.65,
+  "avg_confidence": 0.5
+}

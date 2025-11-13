@@ -1,0 +1,13 @@
+[
+  {
+    "speaker": "speaker_0",
+    "start": 0.0,
+    "end": 2.53,
+    "text": "[transcription pending]",
+    "confidence": 0.5,
+    "duration": 2.53,
+    "is_target": false,
+    "chunk_index": null,
+    "overlap": false
+  }
+]

@@ -1,0 +1,69 @@
+defaults:
+  - pipeline: base
+  - runtime: local
+
+experiment:
+  name: unified_neural_pipeline
+  output_root: outputs
+
+io:
+  sample_rate: 16000
+  chunk_size_s: 6.0
+  hop_size_s: 2.0
+  device: "cuda"
+  target_reference_duration_range: [3.0, 60.0]
+  resample: true
+
+preprocessing:
+  enable_denoise: true
+  enable_vad: true
+  frame_length_ms: 30.0
+  frame_hop_ms: 10.0
+  pad_ms: 120.0
+  min_speech_duration: 0.25
+  highpass_hz: 55.0
+  energy_threshold: null
+
+separation:
+  model_path: "models/mossformer2/mossformer2.pt"
+  sample_rate: 48000
+  max_speakers: 4
+  detection_threshold: 0.5
+  similarity_threshold: 0.6
+  device: "cuda"
+
+speaker_embedding:
+  model_path: "models/eres2net/eres2netv2-large.ckpt"
+  device: "cuda"
+
+diarization:
+  overlap_model_path: "models/pyannote/overlap_detection.pt"
+  diarization_model_path: "models/pyannote/diarization.pt"
+  device: "cuda"
+  min_speech_duration: 0.3
+  max_speakers: 4
+
+asr:
+  backend: "whisper"
+  model_path: "models/whisper/large-v3"
+  device: "cuda"
+  language: null
+
+punctuation:
+  model_path: "models/ct_transformer/punctuation.pt"
+  device: "cuda"
+  enabled: true
+
+logging:
+  level: INFO
+  structured: true
+  json: false
+
+telemetry:
+  prometheus:
+    enabled: true
+    port: 9101
+  opentelemetry:
+    enabled: false
+
+
